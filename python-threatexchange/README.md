@@ -121,7 +121,7 @@ While the CLI was designed for use with signal exchanges. The normal flow is rou
 $ threatexchange --help  # The help should give a decent overview of functionalities
 
 # Step 1: We can skip this step if using the sample data
-$ threatexchange collab edit ...
+$ threatexchange config collab edit ...
 
 # Step 2: This will save progress, and we'll want to rerun it to get new data periodically
 $ threatexchange fetch
@@ -205,8 +205,8 @@ $ TX_NCMEC_CREDENTIALS='<TOKEN>'
 $ export TX_NCMEC_CREDENTIALS
 
 # Step 2 - set up config
-# Example: NGO database only using esp=1
-$ threatexchange config collab edit ncmec --create 'NCMEC NGO' --environment=NGO --only-esp
+# Example: NGO database only using esp=1 (member id)
+$ threatexchange config collab edit ncmec --create 'NCMEC NGO' --environment=NGO --only-esp-ids 1
 
 $ threatexchange fetch
 ```
